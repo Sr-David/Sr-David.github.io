@@ -1,12 +1,545 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
     height: 100vh;
-    background: radial-gradient(circle, rgb(255, 230, 0) 36%, rgba(255,149,0,1) 100%);
-    font-family: "Consolas", sans-serif;
+    font-family: "Courier New", sans-serif;
+}
+
+
+.inicio {
+    background: #111111;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap:wrap;
+    height: 100vh;
+    background-image: url("img/fondoNubes.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+.inicio h1 {
+    font-size: 90px;
+    margin-bottom: 20px;
+    font-family: "Danfo", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "ELSH" 0;
+    width: fit-content;
+    background: linear-gradient(to right, white 50%, orange 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 0.5s ease;
+    background-size: 200% 100%;
+    background-position: 0% 0;
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.inicio h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background: rgb(255, 165, 0);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: left;
+}
+
+.inicio h1:hover {
+    background-position: -100% 0;
+}
+
+.inicio h1:hover::after {
+    transform: scaleX(1);
+}
+
+.foto {
+    width: 50%;
+    margin: auto;
+    text-align: right;
+    padding-right: 100px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.nombre {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+
+.imagen {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/* 
+.educacionDiv {
+    background-color: #111111;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+} */
+
+
+
+.contenedorEdu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    height:max-content;
+    min-height: 100vh;
+    background-color: #111111;
+    background-image: url("img/ordenador.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    background-blend-mode: overlay; /* Mezcla la imagen con el color */
+   
+}
+
+
+.eduClas {
+    width: 550px;
+    height: 750px;
+    text-align: center;
+    background-image: url("papel_estudios.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+
+    
+}
+
+
+.expClas{
+
+    width: 550px;
+    height: 750px;
+    text-align: center;
+    background-image: url("papel_exp.png");
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+
+
+}
+
+
+
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit:cover; 
+    filter: grayscale(100%);
+}
+
+.contenido {
+
+    height: 100vh;
+    z-index: 1;
+    color: white;
+    text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.interiorContenido{
+
+    width: 700px;
+    height: 500px;
+    background-color:#111111;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+
+
+}
+
+
+.divVideo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;    
+    
+    background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+/* PARTE DE BARRA SKILLS */
+
+.contenedorSkills{
+
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.skill{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    color: white;    
+
+
+
+}
+
+
+.skill h3{
+
+    font-size: 25px;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "ELSH" 0;
+    width:25%;
+    
+    text-align: right;
+
+
+
+}
+
+.barra{
+
+    width: 70%;
+    height: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+
+}
+
+.java{
+
+    background-color: orange;
+    width: 0%;
+    height: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+
+}
+
+.MySql{
+
+    background-color: orange;
+    width: 0%;
+    height: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+}
+
+
+.python{
+
+    background-color: orange;
+    width: 0%;
+    height: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+
+
+}
+
+.html{
+
+    background-color: orange;
+    width: 0%;
+    height: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+
+
+}
+
+
+
+.css{
+
+    background-color: orange;
+    width: 0%;
+    height: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    transition: 1s ease-in-out;
+
+}
+
+
+.javascript{
+
+    background-color: orange;
+    width: 0%;
+    height: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+}
+
+
+
+
+
+
+.wordpress{
+
+    background-color: orange;
+    width: 0%;
+    height: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+
+}
+
+
+
+.skill-animation{
+
+    animation: skill-animation 2s ease-in-out;
+
+
+}
+
+
+
+
+/* SECCION DE CONTACTO */
+
+
+
+.contenedorContacto{
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding-top: 200px;
+    background-image: url("fondoNubes.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;    
+
+}
+
+
+.carta{
+
+    height: 500px;
+    width: 800px;
+    background-color: #f0d4ab;
+    border-radius: 5px;
+    border-top: 300px solid #a78759;
+    border-left: 300px solid #f0d4ab;
+    border-right: 300px solid #f0d4ab;
+    border-bottom: 300px solid #f0d4ab;
+
+    
+
+
+
+}
+
+
+
+.papelCarta{
+
+    height: 500px;
+    width: 800px;
+    background-image: url("papel_contacto.png");
+    background-size: contain; /* Mantener las proporciones de la imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .inicio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto,
+    .nombre {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto {
+        padding-top: 50px; /* Ajusta el espaciado según sea necesario */
+    }
+
+    .nombre {
+        padding: 0;
+    }
+
+    /* AÑADIR  INTERIOR CONTENIDO*/
+
+    .interiorContenido{
+
+        width: 100%;
+        height: 100%;
+        background-color:#111111;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        
+    }
+
+    .skill h3{
+
+        font-size: 15px;
+        font-weight: 100;
+        font-style: normal;
+        font-variation-settings: "ELSH" 0;
+        width:25%;
+        
+        text-align: right;
+    
+    }
+
 
 }
