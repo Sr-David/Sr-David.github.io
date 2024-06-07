@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,20 +8,19 @@
 
 body {
     height: 100vh;
-    font-family: "Courier New", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 .inicio {
     background: #111111;
     color: #fff;
-    padding: 100px 0;
     position: relative;
     z-index: 1;
     display: flex;
     flex-wrap:wrap;
     height: 100vh;
-    background-image: url("img/fondoNubes.png");
+    background-image: url("img/ordenador.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -31,9 +31,8 @@ body {
 .inicio h1 {
     font-size: 90px;
     margin-bottom: 20px;
-    font-family: "Danfo", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
     font-style: normal;
     font-variation-settings: "ELSH" 0;
     width: fit-content;
@@ -80,13 +79,15 @@ body {
 }
 
 .nombre {
-    width: 50%;
-    margin: auto;
-    text-align: left;
+    width: 100%;
+    height: 100vh;
+    margin: none;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
     
 }
 
@@ -98,25 +99,19 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-
 /* 
-.educacionDiv {
-    background-color: #111111;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 100px 0;
-    position: relative;
-    z-index: 1;
+.formacion{
+
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    height: 100vh;
+    justify-content: center;
     align-items: center;
+    padding: 0px;
+    margin: 0px;
+    color: white;   
+    
 } */
-
-
 
 .contenedorEdu {
     display: flex;
@@ -125,50 +120,185 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    justify-content: space-around;
     height:max-content;
     min-height: 100vh;
-    background-color: #111111;
+    color: white;
+
     background-image: url("img/ordenador.jpg");
+    
     background-size: cover;
     background-position: center;
-    
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: white;
-    background-blend-mode: overlay; /* Mezcla la imagen con el color */
-   
+    
+
+
+
 }
 
 
-.eduClas {
-    width: 550px;
-    height: 750px;
-    text-align: center;
-    background-image: url("papel_estudios.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50px;
+.contenedorExp {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:max-content;
+    min-height: 100vh;
+    color: white;
 
+    background-image: url("img/ordenador.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+
+
+
+}
+
+
+.todaFormacion{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+
+
+}
+
+.todaFormacion h2{
+
+    font-size: 30px;
+    font-weight: 100;
+    width:25%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+
+.todaFormacion table{
+    
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.todaFormacion table tr{
+
+    margin: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+
+}
+
+.todaFormacion table td{
+
+    padding: 20px;
+    margin: 0px;
+}
+
+/* Hacer que el primer td de cada tr tenga borde */
+
+.bordeEdu{
+
+    border-left: 2px solid transparent;
+    transition: 1s ease-in-out;
+    /* añadir un degradado al border */
+    border-image: linear-gradient(to bottom, orange 0%, transparent 0%) 1 ;
+    
+}
+.bordeEdu2{
+
+    border-left: 2px solid transparent;
+    transition: 1s ease-in-out;
+    /* añadir un degradado al border */
+    border-image: linear-gradient(to bottom, orange 0%, transparent 0%) 1 ;
     
 }
 
+.tdContent{
 
-.expClas{
-
-    width: 550px;
-    height: 750px;
-    text-align: center;
-    background-image: url("papel_exp.png");
-    background-size: contain; 
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50px;
+    width: 50%;
+    text-align: right;
 
 
 }
 
+.tdContent h3{
+
+   color: orange;
+}
+
+
+.tdContent2{
+
+    width: 50%;
+    text-align: left;
+
+}
+
+.tdContent2 h3{
+
+    color: orange;
+}
+
+
+.tdContent::before{
+
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    margin-top: -30px;
+    margin-left: 103.5%;
+}
+
+.tdContent2::before{
+
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    margin-top: -30px;
+    margin-left: -8.5%;
+}
+
+
+.filtrar{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+
+
+}
 
 
 
@@ -221,6 +351,26 @@ body {
 
 }
 
+.interiorContenido h2{
+
+    font-size: 30px;
+    font-weight: 100;
+    width:25%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.interiorContenido p{
+
+    font-size: 20px;
+    font-weight: 100;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
 
 .divVideo{
 
@@ -235,10 +385,12 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: white;    
-    
-    background-color: rgba(0,0,0,0.8);
+    background-image: url("img/ordenador.jpg");
 
 }
+
+
+
 
 
 
@@ -419,69 +571,175 @@ body {
 /* SECCION DE CONTACTO */
 
 
+.contenedorContacto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:max-content;
+    min-height: 100vh;
+    color: white;
 
-.contenedorContacto{
+    background-image: url("img/ordenador.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
 
+
+
+.divContacto{
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-    padding-top: 200px;
-    background-image: url("fondoNubes.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     color: white;    
+    
+
+
+}
+
+.divContacto h2{
+
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.dividirContacto{
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+.dividirContacto h3 {
+    font-size: 30px;
+    font-weight: 100;
+    width: 100%; /* Cambia el ancho al 100% */
+    text-align: center;
+    margin-right: 0; /* Elimina el margen derecho */
+}
+
+.dividirContacto h4{
+
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    margin-right: 0; /* Elimina el margen derecho */
+
+
 
 }
 
 
-.carta{
+.divCorreo{
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    color: white;    
+    margin-top: 20px;
+    width: 50%;
+    height: 150px;
 
-    height: 500px;
-    width: 800px;
-    background-color: #f0d4ab;
-    border-radius: 5px;
-    border-top: 300px solid #a78759;
-    border-left: 300px solid #f0d4ab;
-    border-right: 300px solid #f0d4ab;
-    border-bottom: 300px solid #f0d4ab;
 
+
+}
+
+.copy{
+
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight:normal;
+    text-align: center;
+    border: none;
+    
+
+}
+
+.copy:hover{
+    font-size: 15px;
+    font-weight:bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.divLinkedin{
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;    
+    margin-top: 20px;
+    width: 50%;
+    height: 150px;
+
+}
+
+
+
+.linkedin{
+
+    width: 40px;
+    height: 40px;
+    background-image: url("img/linkedin.png");
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+    cursor: pointer;
     
 
 
 
 }
-
-
-
-.papelCarta{
-
-    height: 500px;
-    width: 800px;
-    background-image: url("papel_contacto.png");
-    background-size: contain; /* Mantener las proporciones de la imagen */
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative;
+@keyframes tarambee {
+    0% {
+        rotate: 0;
+    }
+    25% {
+        rotate: 5deg;
+    }
+    50% {
+        rotate: 0;
+    }
+    75% {
+        rotate: -5deg;
+    }
+    100% {
+        rotate: 0;
+    }
 }
 
-
-
-
-
-
+.linkedin:hover {
+    animation: tarambee 0.5s ease-in-out;
+}
 
 
 
@@ -526,6 +784,7 @@ body {
         justify-content: center;
         align-items: center;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
         
     }
 
@@ -541,5 +800,563 @@ body {
     
     }
 
+    .barra{
+
+        width: 70%;
+        height: 20px;
+        margin: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        
+    
+    }
+
+    .java{
+    
+        background-color: orange;
+        width: 0%;
+        height: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 1s ease-in-out;
+    
+    }
+
+    .MySql{
+    
+        background-color: orange;
+        width: 0%;
+        height: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 1s ease-in-out;
+    }
+
+    .python{
+    
+        background-color: orange;
+        width: 0%;
+        height: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 1s ease-in-out;
+    
+    
+    }
+
+
+    .html{
+    
+        background-color: orange;
+        width: 0%;
+        height: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 1s ease-in-out;
+    
+    
+    }
+
+    .css{
+    
+        background-color: orange;
+        width: 0%;
+        height: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+        transition: 1s ease-in-out;
+    
+    }
+
+
+    .javascript{
+    
+        background-color: orange;
+        width: 0%;
+        height: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 1s ease-in-out;
+    }
+
+
+    .wordpress{
+    
+        background-color: orange;
+        width: 0%;
+        height: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 1s ease-in-out;
+    
+    }
+
+
+
+    .formacion li{
+
+        width: 90%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+        text-align: center;
+        list-style: none;
+            
+    
+    }
+
+    .formacion li p{
+        padding: 0;
+        margin: 0;
+        text-align: justify;
+    }
+
+    .formacion ul {
+        list-style-position: outside    ;
+        padding: 0;
+        margin: 0;
+    }
+
+    .formacion li div{
+    
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-left: none;
+        position: relative;
+        margin-left: 0px;
+    }
+
+
+    .formacion li div::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 2px;
+        background-color: orange;
+        margin-top: 20px; /* Espacio entre el contenido y la línea */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .formacion li div::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%; /* Para hacer que el círculo sea perfectamente redondo */
+        background-color: orange;
+        margin-top: 20px; /* Espacio entre el contenido y el círculo */
+        margin-left: auto;
+        margin-right: auto;
+        position:absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+
+    }
+
+
+    .divContacto h2{
+
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 20px;
+    
+    }
+
+    .dividirContacto h3 {
+        font-size: 20px;
+        font-weight: 100;
+        width: 100%; /* Cambia el ancho al 100% */
+        text-align: center;
+        margin-right: 0; /* Elimina el margen derecho */
+    }
+
+    .dividirContacto h4{
+    
+        font-size: 15px;
+        font-weight: 100;
+        text-align: center;
+        margin-right: 0; /* Elimina el margen derecho */
+    
+    
+    
+    }
+
+    .divCorreo{
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        flex-direction: column;
+        color: white;    
+        margin-top: 20px;
+        width: 100%;
+        height: 150px;
+    
+    
+    
+    }
+
+    .divLinkedin{
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: white;    
+        margin-top: 20px;
+        width: 100%;
+        height: 150px;
+    
+    }
+
+    .linkedin{
+    
+        width: 40px;
+        height: 40px;
+        background-image: url("img/linkedin.png");
+        background-size: cover;
+        background-position: center;
+        background-color: white;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 1s ease-in-out;
+        cursor: pointer;
+        
+    
+    }
+
+    .copy{
+
+        background-color: transparent;
+        color: white;
+        font-size: 15px;
+        font-weight:normal;
+        text-align: center;
+        border: none;
+        
+    
+    }
+
+    .copy:hover{
+        font-size: 15px;
+        font-weight:bold;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+    
+    }
+
+    .linkedin:hover {
+        animation: tarambee 0.5s ease-in-out;
+    }
+
+    .divContacto{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;    
+        
+    
+    }
+
+    .divContacto h2{
+
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 20px;
+    
+    }
+
+    .dividirContacto{
+
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        color: white;
+        margin-top: 20px;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+
+
+
+
+
 
 }
+
+
+
+
+@media screen and (max-width:800px){
+
+    .todaFormacion table{
+    
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+        color: white;
+        font-size:smaller;
+
+    }
+
+    .todaFormacion table tr{
+    
+        margin: 0px;
+        padding: 0px;
+        border-spacing: 0px;
+        border-collapse: collapse;
+    
+    }
+
+    .todaFormacion table td{
+    
+        padding: 20px;
+        margin: 0px;
+    }
+
+    /* Hacer que el primer td de cada tr tenga borde */
+    
+    .bordeEdu{
+    
+        border-left: 2px solid orange;
+        transition: 1s ease-in-out;
+    }
+
+    .bordeEdu2{
+    
+        border-left: 2px solid orange;
+        transition: 1s ease-in-out;
+    }
+    
+    .tdContent::before{
+        
+        display: none;
+    }
+    
+    .tdContent2::before{
+    
+        display: none;
+    }
+
+
+    
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width:430px){
+
+    .todaFormacion table{
+    
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+        color: white;
+        font-size: 10px;
+
+    }
+
+    .todaFormacion table tr{
+    
+        margin: 0px;
+        padding: 0px;
+        border-spacing: 0px;
+        border-collapse: collapse;
+    
+    }
+
+    .todaFormacion table td{
+    
+        padding: 20px;
+        margin: 0px;
+    }
+
+    /* Hacer que el primer td de cada tr tenga borde */
+    
+    .bordeEdu{
+    
+        border-left: 2px solid orange;
+    
+    }
+
+    .bordeEdu2{
+    
+        border-left: 2px solid orange;
+    
+    }
+    
+    .tdContent::before{
+        
+        display: none;
+    }
+    
+    .tdContent2::before{
+    
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+@media screen and (max-width:300px){
+
+    .todaFormacion table{
+    
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+        color: white;
+        font-size: 9px;
+
+    }
+
+    .todaFormacion table tr{
+    
+        margin: 0px;
+        padding: 0px;
+        border-spacing: 0px;
+        border-collapse: collapse;
+    
+    }
+
+    .todaFormacion table td{
+    
+        padding: 20px;
+        margin: 0px;
+    }
+
+    /* Hacer que el primer td de cada tr tenga borde */
+    
+    .bordeEdu{
+    
+        border-left: 2px solid orange;
+    
+    }
+
+    .bordeEdu2{
+    
+        border-left: 2px solid orange;
+    
+    }
+    
+    .tdContent::before{
+        
+        display: none;
+    }
+    
+    .tdContent2::before{
+    
+        display: none;
+    }
+
+
+
+    .inicio h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-variation-settings: "ELSH" 0;
+        width: fit-content;
+        background: linear-gradient(to right, white 50%, orange 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: background-position 0.5s ease;
+        background-size: 200% 100%;
+        background-position: 0% 0;
+        position: relative; /* Necesario para el pseudo-elemento */
+    }
+
+    .inicio h1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 5px;
+        background: rgb(255, 165, 0);
+        transform: scaleX(0);
+        transition: transform 0.5s ease;
+        transform-origin: left;
+    }
+
+    .inicio h1:hover {
+        background-position: -100% 0;
+    }
+
+    .inicio h1:hover::after {
+        transform: scaleX(1);
+    }
+
+
+
+
+
+
+}
+
+
+
+
