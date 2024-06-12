@@ -7,8 +7,8 @@ window.addEventListener('scroll', function() {
             'java': 60,
             'MySql': 70,
             'python': 20,
-            'html': 80,
-            'css': 60,
+            'html': 70,
+            'css': 50,
             'javascript': 30,
             'wordpress': 60
         };
